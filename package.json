@@ -1,0 +1,23 @@
+{
+  "name": "astral",
+  "version": "1.0.0",
+  "description": "Astral, is a discord multi-purpose bot made for everyone.",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Redekian/astral.git"
+  },
+  "author": "Redekian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Redekian/astral/issues"
+  },
+  "homepage": "https://github.com/Redekian/astral#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "nodemon": "^2.0.13"
+  }
+}
