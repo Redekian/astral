@@ -5,6 +5,10 @@ module.exports = {
         .setName("ping")
         .setDescription("Replies with Pong!"),
     async execute(interaction: any) {
-        await interaction.reply("Pong");
+        await interaction.reply(`**Pong!**`).then(() => {
+            interaction.editReply(
+                `**Pong!**\nClient ping: ${interaction.client.ws.ping}ms`
+            );
+        });
     },
 };
