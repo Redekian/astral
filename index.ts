@@ -20,6 +20,7 @@ const commandFiles = fs
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.data.name, command);
+    console.log(`Command ${file} loaded.`);
 }
 
 client.once("ready", () => {
