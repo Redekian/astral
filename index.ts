@@ -25,6 +25,7 @@ for (const file of commandFiles) {
 
 client.once("ready", () => {
     console.log("Bot is ready");
+    client.user?.setActivity("the stars", { type: "WATCHING" });
 });
 
 client.on("interactionCreate", async (interaction) => {
@@ -36,6 +37,10 @@ client.on("interactionCreate", async (interaction) => {
 
     try {
         await command.execute(interaction);
+        console.log(
+            // @ts-expect-error
+            `${interaction.member?.user.username} used ${interaction.commandName} in #${interaction.channel.name}`
+        );
     } catch (error) {
         console.error(error);
         await interaction.reply({
